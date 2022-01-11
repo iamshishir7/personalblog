@@ -1,0 +1,27 @@
+import Link from 'next/Link'
+
+export default function Layout({children}) {
+    return (
+        <div className='layout'>
+            <header>
+                <Link href='/'>
+                    <a>
+                        <h1>
+                            <span>Just Add</span>
+                            <span>Marmite</span>
+                        </h1>
+                        <h2>Spread the Joy</h2>
+                    </a>
+                </Link>
+            </header>
+
+            <div className='page-content'>
+                {children}
+            </div>
+
+            <footer>
+                <p>Copyright Shishir 2022</p>
+            </footer>
+        </div>
+    )
+}
