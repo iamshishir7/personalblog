@@ -1,7 +1,8 @@
 
-//import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css'
 
 import {createClient} from 'contentful'
+import BlogCard from '../components/BlogCard'
 
 export async function getStaticProps() {
   const client = createClient({
@@ -28,9 +29,9 @@ export default function blogPosts( blogPosts ) {
   console.log(blogPosts)
 
   return (
-    <div className='recipe-list'>
+    <div className={styles.bloglist}>
       {blogPosts.blogPosts.map(blogPost => (
-      <div key={blogPost.sys.id}>{blogPost.fields.title}</div>
+      <BlogCard key={blogPost.sys.id} blogPost={blogPost}/>
     ))}
       
     </div>
