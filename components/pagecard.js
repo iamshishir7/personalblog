@@ -1,8 +1,8 @@
-import Link from 'next/link'
+
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-
-export default function BlogCard({blogPost}) {
+import Link from 'next/link'
+export default function Pagecard({blogPost}) {
 
     const { title, slug, thumbnail, featuredImage, content, tags} = blogPost.fields
     return (

@@ -1,8 +1,7 @@
 
 import styles from '../styles/Home.module.css'
-
 import {createClient} from 'contentful'
-import BlogCard from '../components/BlogCard'
+import Pagecard from '../components/pagecard'
 
 export async function getStaticProps() {
   const client = createClient({
@@ -26,12 +25,12 @@ export async function getStaticProps() {
 
 
 export default function blogPosts( blogPosts ) {
-  console.log(blogPosts)
+  //console.log(blogPosts)
 
   return (
     <div className={styles.bloglist}>
       {blogPosts.blogPosts.map(blogPost => (
-      <BlogCard key={blogPost.sys.id} blogPost={blogPost}/>
+      <Pagecard key={blogPost.sys.id} blogPost={blogPost}/>
     ))}
       
     </div>
