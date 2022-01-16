@@ -46,12 +46,14 @@ export async function getStaticProps({params}) {
   
 }
 
-export default function RecipeDetails({blogPost}) {
+export default function BlogDetails({blogPost}) {
 
   if (!blogPost) return <div>Loading....</div>
   const {featuredImage, title, content, tags, description} = blogPost.fields
 
   //console.log(blogPost)
+
+  var tagkey = 0;
 
     return (
 
@@ -62,14 +64,6 @@ export default function RecipeDetails({blogPost}) {
             <div className={styles.blogauthor}>
                 <span>Shishir Timalsina</span><br/>
                 Full Stack Web developer
-            </div>
-            
-            <div>
-              {tags.map(tag => (
-                <div className={styles.tag}>
-                  {tag}
-                </div>
-              ))}
             </div>
           </div>
          
@@ -86,6 +80,12 @@ export default function RecipeDetails({blogPost}) {
         
         <div className={styles.content}>
             <div>{documentToReactComponents(content)}</div>
+
+            <div>
+               <div key={tagkey} className={styles.tag}>
+                  {tags}
+                </div>
+            </div>
         </div>
         
       </div>
