@@ -1,5 +1,5 @@
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import {createClient} from 'contentful'
 import Pagecard from '../components/pagecard'
 

@@ -1,0 +1,44 @@
+
+.blogheader{
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .titlex {
+    font-size: 6rem;
+    margin: 0.5rem 0;
+  }
+
+  .postdetails{
+    background-color: rgb(247, 247, 247);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color:rgb(85, 85, 85);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+
+    span{
+      font-weight: 500;
+      font-size: 1.5rem;
+      color: black;
+    }
+
+    .tag{
+      margin: 0.5rem;
+    }
+  }
+
+}
+
+.banner {
+  width:99.7vw;
+  position:relative;
+  left: calc(-50vw + 50%);
+  margin:0;
+  padding:3rem 0;
+
+  img{
+    
+  }
+}
+
