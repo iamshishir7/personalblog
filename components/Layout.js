@@ -1,9 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Head from 'next/head'
 
 export default function Layout({children}) {
     return (
         <div className='layout'>
+            <Head>
+                <title>Blog | Shishir Timalsina</title>
+            </Head>
             <header>
                 <Link href='/'>
                     <a>

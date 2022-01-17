@@ -5,6 +5,7 @@ import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import {AiOutlineInstagram} from 'react-icons/ai'
 import {AiOutlineFacebook} from 'react-icons/ai'
 import {AiOutlineTwitter} from 'react-icons/ai'
+import Head from 'next/head'
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -61,6 +62,9 @@ export default function BlogDetails({blogPost}) {
     return (
 
       <div>
+        <Head>
+           <title>{title}</title>
+        </Head>
         <div className={styles.blogheader}>
           <h2 className={styles.titlex}>{title}</h2>
           <div className={styles.postdetails}>
