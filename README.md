@@ -1,1 +1,1 @@
-This is a Blog made for personal use. It was created with the use of Nextjs with Contentful API for extracting content.
+This is a Blog made for personal use. It was created with the use of Nextjs with Contentful API for extracting content..
