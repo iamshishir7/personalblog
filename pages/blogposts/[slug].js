@@ -2,6 +2,9 @@ import {createClient} from 'contentful'
 import Image from 'next/image'
 import styles from '../../styles/Slug.module.scss'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
+import {AiOutlineInstagram} from 'react-icons/ai'
+import {AiOutlineFacebook} from 'react-icons/ai'
+import {AiOutlineTwitter} from 'react-icons/ai'
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -65,6 +68,11 @@ export default function BlogDetails({blogPost}) {
                 <span>Shishir Timalsina</span><br/>
                 Full Stack Web developer
             </div>
+            <div className={styles.socials}>
+              <a href='https://instagram.com/shishir.codes'><AiOutlineInstagram size={40}/></a>
+              <a href='https://facebook.com/iamshishir7'><AiOutlineFacebook size={40}/></a>
+              <a href='https://twitter.com/iamshishir7'><AiOutlineTwitter size={40}/></a>
+            </div>
           </div>
          
           <p>{description}</p>
@@ -81,11 +89,12 @@ export default function BlogDetails({blogPost}) {
         <div className={styles.content}>
             <div>{documentToReactComponents(content)}</div>
 
-            <div>
-               <div key={tagkey} className={styles.tag}>
+            
+            <div className={styles.tag}>
+              <h4>Tags</h4>
                   {tags}
-                </div>
             </div>
+            
         </div>
         
       </div>

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Layout({children}) {
     return (
@@ -6,9 +7,7 @@ export default function Layout({children}) {
             <header>
                 <Link href='/'>
                     <a>
-                        <h1>
-                            Ideas by Shishir
-                        </h1>
+                    <Image src={'/logo.png'} width={200} height={86} />
                     </a>
                 </Link>
             </header>
@@ -17,8 +16,11 @@ export default function Layout({children}) {
                 {children}
             </div>
 
-            <footer>
-                <p>Copyright Shishir 2022</p>
+            <footer >
+                <div className='foot'>
+                    <p>Blog Developed & Maintained by <span>Shishir Timalsina</span></p>
+                    <p><span> 	&copy; Copyright 2022</span></p>
+                </div>
             </footer>
         </div>
     )

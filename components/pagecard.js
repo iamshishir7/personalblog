@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
+
 export default function Pagecard({blogPost}) {
 
     const { title, slug, thumbnail, featuredImage, content, tags, description} = blogPost.fields
@@ -20,7 +21,7 @@ export default function Pagecard({blogPost}) {
                     <p>{description}</p>
                 </div>
                 <div className={styles.actions}>
-                    <Link href={'/blogposts/'+ slug}><a>Read More</a></Link>
+                    <Link href={'/blogposts/'+ slug}>Read More </Link>
                 </div>
             </div>
         </div>
