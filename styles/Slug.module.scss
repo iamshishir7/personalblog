@@ -11,13 +11,15 @@
   }
 
   .postdetails{
-    background-color: #D8E3E7;
+    background-color: rgba(216, 227, 231, 0.3);
     font-size: 1rem;
     padding: 0.5rem 1rem;
     color:#464646;
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+
+    
 
     span{
       font-weight: 500;
@@ -28,6 +30,7 @@
     .socials{
       padding: 0rem 11rem;
       align-self: flex-start;
+      
 
       a {
         color:black;
@@ -63,7 +66,8 @@
   font-size: 1rem;
   padding: 0.5rem 1rem;
   color:rgb(59, 59, 59);
-  background-color: #D8E3E7
+  background-color: #D8E3E7;
+  visibility:hidden;
 }
 
 @media (max-width: 990px) { 
