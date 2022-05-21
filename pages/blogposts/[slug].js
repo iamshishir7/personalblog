@@ -6,6 +6,7 @@ import {AiOutlineInstagram} from 'react-icons/ai'
 import {AiOutlineFacebook} from 'react-icons/ai'
 import {AiOutlineTwitter} from 'react-icons/ai'
 import Head from 'next/head'
+import Link from 'next/link'
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -73,9 +74,10 @@ export default function BlogDetails({blogPost}) {
                 Full Stack Web developer
             </div>
             <div className={styles.socials}>
-              <a href='https://instagram.com/shishir.codes'><AiOutlineInstagram size={40}/></a>
-              <a href='https://facebook.com/iamshishir7'><AiOutlineFacebook size={40}/></a>
-              <a href='https://twitter.com/iamshishir7'><AiOutlineTwitter size={40}/></a>
+
+              <a className={styles.ig} href='https://instagram.com/shishir.codes'><AiOutlineInstagram size={40}/></a>
+              <a className={styles.fb} href='https://facebook.com/iamshishir7'><AiOutlineFacebook size={40}/></a>
+              <a className={styles.tw} href='https://twitter.com/iamshishir7'><AiOutlineTwitter size={40}/></a>
             </div>
           </div>
          
@@ -95,7 +97,6 @@ export default function BlogDetails({blogPost}) {
 
             
             <div className={styles.tag}>
-              <h4>Tags</h4>
                   {tags}
             </div>
             
