@@ -7,6 +7,7 @@ import {AiOutlineFacebook} from 'react-icons/ai'
 import {AiOutlineTwitter} from 'react-icons/ai'
 import Head from 'next/head'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -62,7 +63,12 @@ export default function BlogDetails({blogPost}) {
 
     return (
 
-      <div>
+      <motion.div 
+      initial={{opacity:0, y:20}}
+            animate={{opacity:1, y:0}}
+            exit={{opacity:0, y:20}}
+            transition={{ease:"easeIn", delay:0.05}}
+      >
         <Head>
            <title>{title}</title>
         </Head>
@@ -102,6 +108,6 @@ export default function BlogDetails({blogPost}) {
             
         </div>
         
-      </div>
+      </motion.div>
     )
   }

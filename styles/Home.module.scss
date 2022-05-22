@@ -24,6 +24,7 @@
     margin: 0;
     position: relative;
     top: -10px;
+    overflow: hidden;
   }
 
 .info {
@@ -42,16 +43,17 @@
   }
 
 .actions {
-    margin-top: 20px;
     display: flex;
     justify-content: flex-start;
+    
   }
 
 .actions a {
     color: #fff;
     background: #126E82;
-    padding: 16px 24px;
+    padding: 10px 20px;
     text-decoration: none;
+    
   }
 
  

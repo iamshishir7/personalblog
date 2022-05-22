@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
+import { motion } from 'framer-motion'
+
 
 export default function Layout({children}) {
     return (
-        <div className='layout'>
+        <div className='layout' >
             <Head>
                 <title>Blog | Shishir Timalsina</title>
             </Head>
@@ -16,9 +18,13 @@ export default function Layout({children}) {
                 </Link>
             </header>
 
-            <div className='page-content'>
+           
+            <div className='page-content'
+            
+            >
                 {children}
             </div>
+           
 
             <footer >
                 <div className='foot'>

@@ -2,12 +2,34 @@
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
+import {  motion } from "framer-motion"
+
 
 export default function Pagecard({blogPost}) {
 
     const { title, slug, thumbnail, featuredImage, content, tags, description} = blogPost.fields
+
+    const slashMotion = {
+        rest: { opacity: 1, x:-155, ease: "easeOut", type: "tween" },
+        hover: {
+            x:0,
+          transition: {
+            duration: 0.15,
+            type: "tween",
+            ease: "easeIn"
+          }
+        }
+      };
+    
     return (
-        <div className={styles.card}>
+        <motion.div 
+        initial={{opacity:0, y:50}}
+        animate={{opacity:1, y:0}}
+        exit={{opacity:0, y:50}}
+        transition={{ease:"easeIn", delay:0.05}}
+        >
+        <motion.div initial="rest" whileHover="hover" animate="rest" className={styles.card}
+        >
             <div className={styles.featured}>
             <Image 
                     src={'https:' + thumbnail.fields.file.url}
@@ -20,11 +42,17 @@ export default function Pagecard({blogPost}) {
                     <h4>{title}</h4>
                     <p>{description}</p>
                 </div>
-                <div className={styles.actions}>
+                
+                <motion.div
+                variants={slashMotion}
+                className={styles.actions}>
                     <Link href={'/blogposts/'+ slug}>Read More </Link>
-                </div>
+                </motion.div>
+                
+                
             </div>
-        </div>
+        </motion.div>
+        </motion.div>
     )
 }
 
