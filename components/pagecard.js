@@ -28,6 +28,7 @@ export default function Pagecard({blogPost}) {
         exit={{opacity:0, y:50}}
         transition={{ease:"easeIn", delay:0.05}}
         >
+        <Link href={'/blogposts/'+ slug}>
         <motion.div initial="rest" whileHover="hover" animate="rest" className={styles.card}
         >
             <div className={styles.featured}>
@@ -52,6 +53,7 @@ export default function Pagecard({blogPost}) {
                 
             </div>
         </motion.div>
+        </Link>
         </motion.div>
     )
 }
