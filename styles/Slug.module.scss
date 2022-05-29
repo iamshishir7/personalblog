@@ -17,26 +17,22 @@
     color:#464646;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10rem;
+    gap: 1rem;
+    
 
     .blogauthor{
       grid-column: span 2;
     }
 
     span{
-      font-weight: 500;
+      font-weight: 600;
       font-size: 1.5rem;
-      color: black;
+      color: #159bb9;
     }
 
     .socials{
       
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      
-      
-      
-      
+      justify-content: end;
 
       .ig {
         color:#bc2a8d;
@@ -51,6 +47,17 @@
     }
 
    
+  }
+  .date{
+    padding: 10px 10px;
+    margin-top: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+
+    span {
+      color: #126E82;
+      font-weight: 700;
+    }
   }
 
 }
@@ -88,20 +95,17 @@
 }
 
 @media (max-width: 990px) { 
-  .postdetails{
-    grid-template-columns: 1fr;
-    
-
-    .socials{
-      display: none;
-      
-    }
-  }
+  
   .blogheader{
     max-width: 90%;
   
     .titlex {
       font-size: 3.5rem;
+    }
+
+    .postdetails{
+      grid-template-columns: 1fr;
+      
     }
   
 

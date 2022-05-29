@@ -55,9 +55,14 @@ export async function getStaticProps({params}) {
 export default function BlogDetails({blogPost}) {
 
   if (!blogPost) return <div>Loading....</div>
-  const {featuredImage, title, content, tags, description} = blogPost.fields
+  const {featuredImage, title, content, tags, description, date} = blogPost.fields
 
   //console.log(blogPost)
+
+  const dateparts = date.split('-');
+    const convertdate = new Date(dateparts[0], dateparts[1] - 1, dateparts[2]).toDateString();
+    const day = convertdate.slice(0, 3);
+    const dateonly = convertdate.slice(4,10) + ", " + convertdate.slice(11,15);
 
   var tagkey = 0;
 
@@ -79,13 +84,25 @@ export default function BlogDetails({blogPost}) {
                 <span>Shishir Timalsina</span><br/>
                 Full Stack Web developer
             </div>
+            
             <div className={styles.socials}>
 
-              <a className={styles.ig} href='https://instagram.com/shishir.codes'><AiOutlineInstagram size={40}/></a>
-              <a className={styles.fb} href='https://facebook.com/iamshishir7'><AiOutlineFacebook size={40}/></a>
-              <a className={styles.tw} href='https://twitter.com/iamshishir7'><AiOutlineTwitter size={40}/></a>
+              <a className={styles.ig} href='https://instagram.com/shishir.codes' target="_blank" rel="noopener noreferrer">
+                <AiOutlineInstagram size={40}/>
+              </a>
+
+              &nbsp;&nbsp;
+              &nbsp;&nbsp;
+
+              <a className={styles.fb} href='https://facebook.com/iamshishir7' target="_blank" rel="noopener noreferrer"><AiOutlineFacebook size={40}/></a>
+              
+              &nbsp;&nbsp;
+              &nbsp;&nbsp;
+
+              <a className={styles.tw} href='https://twitter.com/iamshishir7' target="_blank" rel="noopener noreferrer"><AiOutlineTwitter size={40}/></a>
             </div>
           </div>
+          <div className={styles.date}><span>Published on <br/>{day}</span> - {dateonly}</div>
          
           <p>{description}</p>
         </div>

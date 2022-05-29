@@ -46,16 +46,31 @@
 .actions {
     display: flex;
     justify-content: flex-start;
+
+    a {
+      color: #fff;
+      background: #126E82;
+      padding: 10px 20px;
+      text-decoration: none;
+  
+      
+    }
+
+    .date{
+      padding: 10px 10px;
+      margin-top: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+
+      span {
+        color: #126E82;
+        font-weight: 700;
+      }
+    }
+  
     
   }
 
-.actions a {
-    color: #fff;
-    background: #126E82;
-    padding: 10px 20px;
-    text-decoration: none;
-    
-  }
 
  
 

@@ -7,7 +7,7 @@ import {  motion } from "framer-motion"
 
 export default function Pagecard({blogPost}) {
 
-    const { title, slug, thumbnail, featuredImage, content, tags, description} = blogPost.fields
+    const { title, slug, thumbnail, featuredImage, content, tags, description, date} = blogPost.fields
 
     const slashMotion = {
         rest: { opacity: 1, x:-155, ease: "easeOut", type: "tween" },
@@ -20,6 +20,13 @@ export default function Pagecard({blogPost}) {
           }
         }
       };
+      
+    const dateparts = date.split('-');
+    const convertdate = new Date(dateparts[0], dateparts[1] - 1, dateparts[2]).toDateString();
+    const day = convertdate.slice(0, 3);
+    const dateonly = convertdate.slice(4,10) + ", " + convertdate.slice(11,15);
+    
+
     
     return (
         <motion.div 
@@ -48,10 +55,12 @@ export default function Pagecard({blogPost}) {
                 variants={slashMotion}
                 className={styles.actions}>
                     <Link href={'/blogposts/'+ slug}>Read More </Link>
+                    <div className={styles.date}><span>{day}</span> - {dateonly}</div>
                 </motion.div>
                 
                 
             </div>
+            
         </motion.div>
         </Link>
         </motion.div>
