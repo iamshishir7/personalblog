@@ -53,6 +53,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
    
   }
+
+  p {
+    font-size: 1.2rem;
+  }
   .date{
     padding: 10px 10px;
     margin-top: 6px;
@@ -76,7 +80,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .content{
-  font-size: 1.2rem;
+  font-size: 1rem;
 
   a{
     text-decoration: none;
@@ -112,6 +116,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
       grid-template-columns: 1fr;
       
     }
+
+    p{
+      font-size: 1.3rem;
+    }
   
 
  }
@@ -120,7 +128,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   width:100vw;
 }
 .content{
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 
 }
 
