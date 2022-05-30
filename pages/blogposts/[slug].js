@@ -82,7 +82,7 @@ export default function BlogDetails({blogPost}) {
           <div className={styles.postdetails}>
             <div className={styles.blogauthor}>
                 <span>Shishir Timalsina</span><br/>
-                Full Stack Web developer
+                Full Stack Web and Software developer
             </div>
             
             <div className={styles.socials}>
