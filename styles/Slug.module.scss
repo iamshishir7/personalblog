@@ -11,7 +11,12 @@
   }
 
   .postdetails{
-    background-color: rgba(216, 227, 231, 0.3);
+    background: rgba( 18, 110, 130, 0.05 );
+
+backdrop-filter: blur( 2px );
+-webkit-backdrop-filter: blur( 2px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
     font-size: 1rem;
     padding: 0.5rem 1rem;
     color:#464646;

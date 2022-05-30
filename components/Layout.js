@@ -22,6 +22,7 @@ export default function Layout({children}) {
             <div className='page-content'
             
             >
+                
                 {children}
             </div>
            
