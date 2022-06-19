@@ -10,7 +10,7 @@ export default function Pagecard({blogPost}) {
     const { title, slug, thumbnail, featuredImage, content, tags, description, date} = blogPost.fields
 
     const slashMotion = {
-        rest: { opacity: 1, x:-155, ease: "easeOut", type: "tween" },
+        rest: { opacity: 1, x:-115, ease: "easeOut", type: "tween" },
         hover: {
             x:0,
           transition: {
