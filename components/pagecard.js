@@ -1,4 +1,4 @@
-
+import { useMemo } from 'react';
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
@@ -21,10 +21,13 @@ export default function Pagecard({blogPost}) {
         }
       };
       
-    const dateparts = date.split('-');
-    const convertdate = new Date(dateparts[0], dateparts[1] - 1, dateparts[2]).toDateString();
-    const day = convertdate.slice(0, 3);
-    const dateonly = convertdate.slice(4,10) + ", " + convertdate.slice(11,15);
+      const {dateonly, day} = useMemo(() =>{
+        const dateparts = date.split('-');
+        const convertdate = new Date(dateparts[0], dateparts[1] - 1, dateparts[2]).toDateString();
+        const day = convertdate.slice(0, 3);
+        const dateonly = convertdate.slice(4,10) + ", " + convertdate.slice(11,15);
+        return {dateonly,day}
+      },[date])
     
 
     
