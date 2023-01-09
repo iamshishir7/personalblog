@@ -5,6 +5,9 @@ import { motion } from 'framer-motion'
 
 
 export default function Layout({children}) {
+    const getYear = () => {
+        return new Date().getFullYear()
+    }
     return (
         <div className='layout' >
             <Head>
@@ -30,7 +33,7 @@ export default function Layout({children}) {
             <footer >
                 <div className='foot'>
                     <p>Blog Developed & Maintained by <span>Shishir Timalsina</span></p>
-                    <p><span> 	&copy; Copyright 2022</span></p>
+                    <p><span>&copy; Copyright {getYear()}</span></p>
                 </div>
             </footer>
         </div>

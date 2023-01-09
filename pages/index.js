@@ -11,28 +11,20 @@ export async function getStaticProps() {
 
   const res = await client.getEntries({ content_type: 'blogPost'})
 
-
   return { 
     props: { blogPosts: res.items },
     revalidate: 1
- 
   }
-
-  
-  
 }
 
 
 
-export default function blogPosts( blogPosts ) {
-  //console.log(blogPosts)
-
+export default function blogPosts({blogPosts}) {
   return (
     <div className={styles.bloglist}>
-      {blogPosts.blogPosts.map(blogPost => (
+      {blogPosts.map(blogPost => (
       <Pagecard key={blogPost.sys.id} blogPost={blogPost}/>
     ))}
-      
     </div>
   )
 }

@@ -7,7 +7,7 @@ import {  motion } from "framer-motion"
 
 export default function Pagecard({blogPost}) {
 
-    const { title, slug, thumbnail, featuredImage, content, tags, description, date} = blogPost.fields
+    const { title, slug, thumbnail, description, date} = blogPost.fields
 
     const slashMotion = {
         rest: { opacity: 1, x:-115, ease: "easeOut", type: "tween" },
