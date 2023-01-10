@@ -54,7 +54,12 @@ export async function getStaticProps({params}) {
 }
 
 export default function BlogDetails({blogPost}) {
+  
+
+  if (!blogPost) return (<div>Loading....</div>);
+
   const {featuredImage, title, content, tags, description, date} = blogPost.fields
+  
   const {dateonly, day} = useMemo(() =>{
     const dateparts = date.split('-');
     const convertdate = new Date(dateparts[0], dateparts[1] - 1, dateparts[2]).toDateString();
@@ -62,10 +67,6 @@ export default function BlogDetails({blogPost}) {
     const dateonly = convertdate.slice(4,10) + ", " + convertdate.slice(11,15);
     return {dateonly,day}
   },[date])
-
-  if (!blogPost) return <div>Loading....</div>
-
-  
 
   var tagkey = 0;
 
