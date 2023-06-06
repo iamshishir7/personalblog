@@ -103,6 +103,7 @@ const renderOptions = {
     },
 
     [INLINES.HYPERLINK]: node => {
+
       // Only process youtube links
       if (node.data.uri.includes("youtube.com")) {
           // Extract videoId from the URL
@@ -126,6 +127,8 @@ const renderOptions = {
               </section>
               )
           )
+      } else {
+        return <a href={node.data.uri}>{node.content[0].value}</a>
       }
     },
   },
