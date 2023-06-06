@@ -128,7 +128,7 @@ const renderOptions = {
               )
           )
       } else {
-        return <a href={node.data.uri}>{node.content[0].value}</a>
+        return <a href={node.data.uri} target="_blank">{node.content[0].value}</a>
       }
     },
   },
