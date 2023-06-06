@@ -101,6 +101,33 @@ const renderOptions = {
         />
       );
     },
+
+    [INLINES.HYPERLINK]: node => {
+      // Only process youtube links
+      if (node.data.uri.includes("youtube.com")) {
+          // Extract videoId from the URL
+          const match = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/.exec(
+              node.data.uri
+          )
+          const videoId =
+              match && match[7].length === 11 ? match[7] : null
+          return (
+              videoId && (
+              <section>
+                  <iframe
+                      className="youtube-video"
+                      style={{aspectRatio:'16 / 9', width: '100%'}}
+                      title={`https://youtube.com/embed/${videoId}`}
+                      src={`https://youtube.com/embed/${videoId}`}
+                      allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                      frameBorder="0"
+                      allowFullScreen
+                  />
+              </section>
+              )
+          )
+      }
+    },
   },
 };
 
