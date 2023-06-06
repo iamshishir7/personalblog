@@ -1,6 +1,6 @@
 
 .blogheader{
-  max-width: 70%;
+  max-width: 80%;
   margin-left: auto;
   margin-right: auto;
 
@@ -11,7 +11,7 @@
   }
 
   .postdetails{
-    background: rgba( 18, 110, 130, 0.05 );
+    background: #caf0f8;
 
 backdrop-filter: blur( 2px );
 -webkit-backdrop-filter: blur( 2px );
@@ -32,7 +32,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     span{
       font-weight: 600;
       font-size: 1.5rem;
-      color: #159bb9;
+      
     }
 
     .socials{
@@ -77,8 +77,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 // }
 
 .content{
-  font-size: 1rem;
-
+  font-size: 1.2rem;
+  margin-top: 5rem;
   a{
     text-decoration: none;
     color: #159bb9;
@@ -123,10 +123,13 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
  .banner {
   width:100vw;
+  
+  
 }
 .content{
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 
 }
+
 
 }
