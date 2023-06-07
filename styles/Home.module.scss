@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap:3rem 3rem;
+    
 }
 
 @media (max-width: 990px) { 
@@ -15,7 +16,6 @@
 .card {
     
     cursor: pointer;
-    
     
   }
 
