@@ -190,11 +190,11 @@ export default function BlogDetails({blogPost}) {
           <p>{description}</p>
         </div>
         <div className={styles.banner}>
-          <Image className={styles.bannerimage}
+          <Image className={`image ${styles.bannerimage}`}
               src={'https:' + featuredImage.fields.file.url}
               width={featuredImage.fields.file.details.image.width}
               height={featuredImage.fields.file.details.image.height}
-              layout='responsive'
+              
           />
         </div>
         
