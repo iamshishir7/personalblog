@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import {createClient} from 'contentful'
 import Image from 'next/image'
+import {useRouter} from 'next/router';
 import styles from '../../styles/Slug.module.scss'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
@@ -148,7 +149,8 @@ export default function BlogDetails({blogPost}) {
   const day = convertdate.slice(0, 3);
   const dateonly = convertdate.slice(4,10) + ", " + convertdate.slice(11,15);
 
-
+  const {asPath} = useRouter()
+  
   var tagkey = 0;
 
     return (
@@ -217,7 +219,7 @@ export default function BlogDetails({blogPost}) {
             <div className={styles.sharecontainer}>
               <div>Share it on</div>
               <TwitterShareButton
-                url={window.location.href}
+                url={`https://blog.sisir.dev${asPath}`}
                 quote={'Shishir Blog'}
                 hashtag="#blogpost"
               >
@@ -225,7 +227,7 @@ export default function BlogDetails({blogPost}) {
               </TwitterShareButton>
 
               <FacebookShareButton
-                url={window.location.href}
+                url={`https://blog.sisir.dev${asPath}`}
                 quote={'Shishir Blog!'}
                 hashtag="#blogpost"
               >
@@ -233,7 +235,7 @@ export default function BlogDetails({blogPost}) {
               </FacebookShareButton>
 
               <WhatsappShareButton
-                url={window.location.href}
+                url={`https://blog.sisir.dev${asPath}`}
                 quote={'Shishir Blog'}
                 hashtag="#blogpost"
               >
@@ -241,7 +243,7 @@ export default function BlogDetails({blogPost}) {
               </WhatsappShareButton>
 
               <EmailShareButton
-                url={window.location.href}
+                url={`https://blog.sisir.dev${asPath}`}
                 quote={'Shishir Blog'}
                 hashtag="#blogpost"
               >
