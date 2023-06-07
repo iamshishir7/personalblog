@@ -8,6 +8,7 @@ import {FaInstagram} from 'react-icons/fa'
 import {FaFacebook} from 'react-icons/fa'
 import {FaTwitter} from 'react-icons/fa'
 import {AiOutlineTags} from 'react-icons/ai'
+import { TwitterShareButton, TwitterIcon, FacebookShareButton, FacebookIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon } from 'react-share';
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -211,6 +212,41 @@ export default function BlogDetails({blogPost}) {
                       ))
                     }
               </div>
+            </div>
+
+            <div className={styles.sharecontainer}>
+              <div>Share it on</div>
+              <TwitterShareButton
+                url={window.location.href}
+                quote={'Shishir Blog'}
+                hashtag="#blogpost"
+              >
+                <TwitterIcon size={35} round />
+              </TwitterShareButton>
+
+              <FacebookShareButton
+                url={window.location.href}
+                quote={'Shishir Blog!'}
+                hashtag="#blogpost"
+              >
+                <FacebookIcon size={35} round />
+              </FacebookShareButton>
+
+              <WhatsappShareButton
+                url={window.location.href}
+                quote={'Shishir Blog'}
+                hashtag="#blogpost"
+              >
+                <WhatsappIcon size={35} round />
+              </WhatsappShareButton>
+
+              <EmailShareButton
+                url={window.location.href}
+                quote={'Shishir Blog'}
+                hashtag="#blogpost"
+              >
+                <EmailIcon size={35} round />
+              </EmailShareButton>
             </div>
         </div>
         

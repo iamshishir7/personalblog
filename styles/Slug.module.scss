@@ -109,6 +109,16 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 }
 
+.sharecontainer{
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 
 
 @media (max-width: 990px) { 
@@ -132,11 +142,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
  }
 
- .banner {
-  width:100vw;
-  
-  
-}
 .content{
   font-size: 1.3rem;
   
