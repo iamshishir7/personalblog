@@ -10,17 +10,17 @@
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.5",
     "@contentful/rich-text-types": "^16.2.0",
-    "contentful": "^9.1.5",
-    "framer-motion": "^6.3.3",
+    "contentful": "^10.2.3",
+    "framer-motion": "^10.12.16",
     "next": "^13.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.3.1",
-    "react-share": "^4.4.0",
-    "sass": "^1.48.0"
+    "react-icons": "^4.9.0",
+    "react-share": "^4.4.1",
+    "sass": "^1.62.1"
   },
   "devDependencies": {
-    "eslint": "8.6.0",
+    "eslint": "8.42.0",
     "eslint-config-next": "^13.4.4"
   }
 }
