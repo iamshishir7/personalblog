@@ -139,6 +139,7 @@ const renderOptions = {
 
 export default function BlogDetails({blogPost}) {
   
+  const {asPath} = useRouter()
 
   if (!blogPost) return (<div>Loading....</div>);
 
@@ -149,7 +150,7 @@ export default function BlogDetails({blogPost}) {
   const day = convertdate.slice(0, 3);
   const dateonly = convertdate.slice(4,10) + ", " + convertdate.slice(11,15);
 
-  const {asPath} = useRouter()
+  
   
   var tagkey = 0;
 
