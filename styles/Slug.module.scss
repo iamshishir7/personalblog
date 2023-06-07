@@ -71,10 +71,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 }
 
-// .banner {
-//   display: flex;
-//   align-items: center;
-// }
+.banner {
+  width: 100%;
+}
 
 .content{
   font-size: 1.2rem;
@@ -86,6 +85,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .tagcontainer{
   margin-top: 3rem;
+  
   p{
     font-size: 1rem;
     font-weight: 700;
@@ -93,6 +93,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   .taglist{
     display: flex;
     gap: 0.5rem;
+    flex-wrap: wrap;
 
     .tag{
       font-size: 1rem;
@@ -138,7 +139,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 .content{
   font-size: 1.3rem;
-
+  
 }
 
 
