@@ -84,21 +84,31 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: #159bb9;
   }
 }
-
-.tag{
-  h4 {
-    color:black;
-    margin: 0;
-    padding:0.5rem 0;
-    font-size: 1.3rem;
-
+.tagcontainer{
+  margin-top: 3rem;
+  p{
+    font-size: 1rem;
+    font-weight: 700;
   }
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  color:rgb(59, 59, 59);
-  background-color: #D8E3E7;
-  visibility: hidden;
+  .taglist{
+    display: flex;
+    gap: 0.5rem;
+
+    .tag{
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      color:rgb(59, 59, 59);
+      background-color: #caf0f8;
+      display: flex;
+      align-items: center;
+      gap:0.2rem;
+      text-transform: capitalize;
+    }
+  }
 }
+
+
 
 @media (max-width: 990px) { 
   

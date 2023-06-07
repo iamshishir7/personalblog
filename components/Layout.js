@@ -32,7 +32,7 @@ export default function Layout({children}) {
 
             <footer >
                 <div className='foot'>
-                    <p>Blog Developed & Maintained by <span>Shishir Timalsina</span></p>
+                    <p>Blog developed & maintained by <span>Shishir Timalsina</span></p>
                     <p><span>&copy; Copyright {getYear()}</span></p>
                 </div>
             </footer>

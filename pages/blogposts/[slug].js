@@ -7,6 +7,7 @@ import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import {FaInstagram} from 'react-icons/fa'
 import {FaFacebook} from 'react-icons/fa'
 import {FaTwitter} from 'react-icons/fa'
+import {AiOutlineTags} from 'react-icons/ai'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -201,11 +202,16 @@ export default function BlogDetails({blogPost}) {
         <div className={styles.content}>
             <div>{documentToReactComponents(content, renderOptions)}</div>
 
-            
-            <div className={styles.tag}>
-                  {tags}
+            <div className={styles.tagcontainer}>
+              <p>Tags</p>
+              <div className={styles.taglist}>
+                    {
+                      tags.map((tag,i) => (
+                        <div className={styles.tag} key={i}><AiOutlineTags/>{tag}</div>
+                      ))
+                    }
+              </div>
             </div>
-            
         </div>
         
       </motion.div>
