@@ -92,13 +92,12 @@ const renderOptions = {
     [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
       // render the EMBEDDED_ASSET as you need
       return (
-        <img
+        <Image
           src={`https://${node.data.target.fields.file.url}`}
-          // height={node.data.target.fields.file.details.image.height}
-          // width={node.data.target.fields.file.details.image.width}
-          width={'100%'}
+          height={node.data.target.fields.file.details.image.height}
+          width={node.data.target.fields.file.details.image.width}
           alt={node.data.target.fields.description}
-          layout='fill'
+          className='image'
         />
       );
     },
@@ -115,7 +114,7 @@ const renderOptions = {
               match && match[7].length === 11 ? match[7] : null
           return (
               videoId && (
-              <section>
+              
                   <iframe
                       className="youtube-video"
                       style={{aspectRatio:'16 / 9', width: '100%'}}
@@ -125,7 +124,7 @@ const renderOptions = {
                       frameBorder="0"
                       allowFullScreen
                   />
-              </section>
+              
               )
           )
       } else {
@@ -171,19 +170,19 @@ export default function BlogDetails({blogPost}) {
             
             <div className={styles.socials}>
 
-              <a className={styles.ig} href='https://instagram.com/sisir.dev' target="_blank" rel="noopener noreferrer">
+              <Link className={styles.ig} href='https://instagram.com/sisir.dev' target="_blank" rel="noopener noreferrer">
                 <FaInstagram size={40}/>
-              </a>
+              </Link>
 
               &nbsp;&nbsp;
               &nbsp;&nbsp;
 
-              <a className={styles.fb} href='https://facebook.com/iamshishir7' target="_blank" rel="noopener noreferrer"><FaFacebook size={40}/></a>
+              <Link className={styles.fb} href='https://facebook.com/iamshishir7' target="_blank" rel="noopener noreferrer"><FaFacebook size={40}/></Link>
               
               &nbsp;&nbsp;
               &nbsp;&nbsp;
 
-              <a className={styles.tw} href='https://twitter.com/iamshishir7' target="_blank" rel="noopener noreferrer"><FaTwitter size={40}/></a>
+              <Link className={styles.tw} href='https://twitter.com/iamshishir7' target="_blank" rel="noopener noreferrer"><FaTwitter size={40}/></Link>
             </div>
           </div>
           <div className={styles.date}><span>Published on <br/>{day}</span> - {dateonly}</div>

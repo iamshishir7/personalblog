@@ -38,7 +38,7 @@ export default function Pagecard({blogPost}) {
         exit={{opacity:0, y:50}}
         transition={{ease:"easeIn", delay:0.05}}
         >
-        <Link href={'/blogposts/'+ slug}>
+        <Link legacyBehavior href={'/blogposts/'+ slug}>
         <motion.div initial="rest" whileHover="hover" animate="rest" className={styles.card}
         >
             <div className={styles.featured}>
@@ -46,6 +46,8 @@ export default function Pagecard({blogPost}) {
                     src={'https:' + thumbnail.fields.file.url}
                     width={thumbnail.fields.file.details.image.width}
                     height={thumbnail.fields.file.details.image.height}
+                    className='image'
+                    
                 />
             </div>
             <div className={styles.content}>
@@ -60,11 +62,10 @@ export default function Pagecard({blogPost}) {
                     <Link href={'/blogposts/'+ slug}>Read More </Link>
                     <div className={styles.date}><span>{day}</span> - {dateonly}</div>
                 </motion.div>
-                
-                
             </div>
             
         </motion.div>
+        
         </Link>
         </motion.div>
     )

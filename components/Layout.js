@@ -14,10 +14,10 @@ export default function Layout({children}) {
                 <title>Blog | Shishir Timalsina</title>
             </Head>
             <header>
-                <Link href='/'>
-                    <a>
-                    <Image src={'/logo.png'} width={200} height={86} />
-                    </a>
+                <Link  href='/'>
+                    
+                    <Image  src={'/logo.png'} width={200} height={86} />
+                    
                 </Link>
             </header>
 
