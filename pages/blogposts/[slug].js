@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import {createClient} from 'contentful'
 import Image from 'next/image'
 import {useRouter} from 'next/router';
