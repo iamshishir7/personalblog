@@ -19,7 +19,7 @@ border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    color:#464646;
+    color:rgb(55, 65, 81);
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
@@ -55,7 +55,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    color: rgb(55, 65, 81)
   }
   .date{
     padding: 10px 10px;
@@ -76,8 +77,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .content{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-top: 3rem;
+  color: rgb(55, 65, 81);
   a{
     text-decoration: none;
     color: #159bb9;
@@ -136,14 +138,14 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
 
     p{
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
   
 
  }
 
 .content{
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   
 }
 
