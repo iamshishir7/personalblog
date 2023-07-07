@@ -9,18 +9,7 @@ export default function Pagecard({blogPost}) {
 
     const { title, slug, thumbnail, description, date} = blogPost.fields
 
-    const slashMotion = {
-        rest: { opacity: 1, x:-115, ease: "easeOut", type: "tween" },
-        hover: {
-            x:0,
-          transition: {
-            duration: 0.15,
-            type: "tween",
-            ease: "easeIn"
-          }
-        }
-      };
-      
+    
       const {dateonly, day} = useMemo(() =>{
         const dateparts = date.split('-');
         const convertdate = new Date(dateparts[0], dateparts[1] - 1, dateparts[2]).toDateString();
@@ -57,7 +46,6 @@ export default function Pagecard({blogPost}) {
                 </div>
                 
                 <motion.div
-                variants={slashMotion}
                 className={styles.actions}>
                     <Link href={'/blogposts/'+ slug}>Read More </Link>
                     <div className={styles.date}><span>{day}</span> - {dateonly}</div>

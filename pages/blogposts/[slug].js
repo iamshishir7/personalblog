@@ -4,14 +4,12 @@ import {useRouter} from 'next/router';
 import styles from '../../styles/Slug.module.scss'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
-import {FaInstagram} from 'react-icons/fa'
-import {FaFacebook} from 'react-icons/fa'
-import {FaTwitter} from 'react-icons/fa'
 import {AiOutlineTags} from 'react-icons/ai'
 import { TwitterShareButton, TwitterIcon, FacebookShareButton, FacebookIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon } from 'react-share';
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import BlogAuthor from '../../components/blogAuthor';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -166,29 +164,7 @@ export default function BlogDetails({blogPost}) {
         </Head>
         <div className={styles.blogheader}>
           <h2 className={styles.titlex}>{title}</h2>
-          <div className={styles.postdetails}>
-            <div className={styles.blogauthor}>
-                <span>Shishir Timalsina</span><br/>
-                Web and Software developer
-            </div>
-            
-            <div className={styles.socials}>
-
-              <Link className={styles.ig} href='https://instagram.com/sisir.dev' target="_blank" rel="noopener noreferrer">
-                <FaInstagram size={40}/>
-              </Link>
-
-              &nbsp;&nbsp;
-              &nbsp;&nbsp;
-
-              <Link className={styles.fb} href='https://facebook.com/iamshishir7' target="_blank" rel="noopener noreferrer"><FaFacebook size={40}/></Link>
-              
-              &nbsp;&nbsp;
-              &nbsp;&nbsp;
-
-              <Link className={styles.tw} href='https://twitter.com/iamshishir7' target="_blank" rel="noopener noreferrer"><FaTwitter size={40}/></Link>
-            </div>
-          </div>
+          <BlogAuthor author={'Shishir Timalsina'} caption={'Software and Web developer'}/>
           <div className={styles.date}><span>Published on <br/>{day}</span> - {dateonly}</div>
          
           <p>{description}</p>

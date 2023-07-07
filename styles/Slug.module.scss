@@ -10,7 +10,7 @@
     color:#132C33
   }
 
-  .postdetails{
+  .blogauthor{
     background: #caf0f8;
 
 backdrop-filter: blur( 2px );
@@ -25,7 +25,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     gap: 1rem;
     
 
-    .blogauthor{
+    .authorname{
       grid-column: span 2;
     }
 
@@ -130,7 +130,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
       font-size: 3.5rem;
     }
 
-    .postdetails{
+    .blogauthor{
       grid-template-columns: 1fr;
       
     }
