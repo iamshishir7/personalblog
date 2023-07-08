@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
-import { motion } from 'framer-motion'
 
 
 export default function Layout({children}) {
@@ -19,6 +18,7 @@ export default function Layout({children}) {
                     <Image  src={'/logo.png'} width={200} height={86} />
                     
                 </Link>
+                
             </header>
 
            

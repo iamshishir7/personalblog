@@ -10,6 +10,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import BlogAuthor from '../../components/blogAuthor';
+import BackButton from '../../components/BackButton';
+import { isMobile } from 'react-device-detect';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -152,7 +154,8 @@ export default function BlogDetails({blogPost}) {
   var tagkey = 0;
 
     return (
-
+      <>
+      {!isMobile && <BackButton/>}
       <motion.div 
       initial={{opacity:0, y:20}}
             animate={{opacity:1, y:0}}
@@ -229,5 +232,6 @@ export default function BlogDetails({blogPost}) {
         </div>
         
       </motion.div>
+      </>
     )
   }
