@@ -33,7 +33,7 @@ const BackButton = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ ease: "easeIn", delay: 0.5 }}
+          transition={{ ease: "easeIn", delay: 0.3 }}
         >
           <Link href={"/"} className={styles.container}>
             <IoChevronBack />

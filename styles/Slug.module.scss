@@ -10,50 +10,6 @@
     color:#132C33
   }
 
-  .blogauthor{
-    background: #caf0f8;
-
-backdrop-filter: blur( 2px );
--webkit-backdrop-filter: blur( 2px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    color:rgb(55, 65, 81);
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    
-
-    .authorname{
-      grid-column: span 2;
-    }
-
-    span{
-      font-weight: 600;
-      font-size: 1.5rem;
-      
-    }
-
-    .socials{
-      
-      justify-content: end;
-
-      .ig {
-        color:#bc2a8d;
-      }
-      .fb {
-        color:#4267B2;
-      }
-      .tw {
-        color:#00acee;
-      }
-      
-    }
-
-   
-  }
-
   p {
     font-size: 22.5px;
     color: rgb(55, 65, 81)
@@ -69,6 +25,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
       font-weight: 700;
     }
   }
+
+  
 
 }
 

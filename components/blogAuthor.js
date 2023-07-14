@@ -1,17 +1,21 @@
 import React from "react";
-import styles from '../styles/Slug.module.scss'
+import styles from '../styles/blogAuthor.module.scss'
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import Link from "next/link";
+import Image from 'next/image'
 
 const BlogAuthor = ({author, caption}) => {
   return (
     <div className={styles.blogauthor}>
       <div className={styles.authorname}>
-        <span>{author}</span>
-        <br />
-        {caption}
+          <Image className={styles.image} src={'/shishir.png'} width={145} height={150} />
+          <div>
+          <span>{author}</span>
+          <br/>
+          {caption}
+          </div>
       </div>
 
       <div className={styles.socials}>
