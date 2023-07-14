@@ -19,10 +19,10 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
-      gap: 0;
+      gap: 0.4rem;
       margin:0;
       align-content: flex-start;
-
+      font-size: 1rem;
 
       .image{
         position: relative;
@@ -35,7 +35,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
       span{
         font-weight: 600;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         
       }
     }
