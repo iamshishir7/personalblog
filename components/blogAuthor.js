@@ -5,12 +5,13 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 import Image from 'next/image'
+import { isMobile } from 'react-device-detect';
 
 const BlogAuthor = ({author, caption}) => {
   return (
     <div className={styles.blogauthor}>
       <div className={styles.authorname}>
-          <Image className={styles.image} src={'/shishir.png'} width={195} height={200} />
+          <Image className={styles.image} src={'/shishir.png'} width={isMobile ? 95 : 145 } height={ isMobile? 100: 150} />
           <div>
           <span>{author}</span>
           <br/>
