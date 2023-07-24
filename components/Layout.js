@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 
 
+
 export default function Layout({children}) {
     const getYear = () => {
         return new Date().getFullYear()
@@ -20,17 +21,10 @@ export default function Layout({children}) {
                 </Link>
                 
             </header>
-
-           
-            <div className='page-content'
-            
-            >
-                
+            <div className='page-content'>
                 {children}
             </div>
-           
-
-            <footer >
+           <footer >
                 <div className='foot'>
                     <p>Blog developed & maintained by <span>Shishir Timalsina</span></p>
                     <p><span>&copy; Copyright {getYear()}</span></p>

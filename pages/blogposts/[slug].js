@@ -7,7 +7,6 @@ import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import {AiOutlineTags} from 'react-icons/ai'
 import { TwitterShareButton, TwitterIcon, FacebookShareButton, FacebookIcon, WhatsappShareButton, WhatsappIcon, EmailShareButton, EmailIcon } from 'react-share';
 import Head from 'next/head'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import BlogAuthor from '../../components/blogAuthor';
 import BackButton from '../../components/BackButton';

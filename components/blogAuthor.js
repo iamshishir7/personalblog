@@ -11,7 +11,7 @@ const BlogAuthor = ({author, caption}) => {
   return (
     <div className={styles.blogauthor}>
       <div className={styles.authorname}>
-          <Image className={styles.image} src={'/shishir.png'} width={isMobile ? 95 : 145 } height={ isMobile? 100: 150} />
+          <Image className={styles.image} src={'/shishir.jpg'} alt="shishir" width={isMobile ? 80 : 130 } height={ isMobile? 80: 130} />
           <div>
           <span>{author}</span>
           <br/>
