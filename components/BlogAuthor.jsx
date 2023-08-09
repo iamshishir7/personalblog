@@ -1,11 +1,9 @@
 import React from "react";
 import styles from '../styles/blogAuthor.module.scss'
-import { FaInstagram } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 import Image from 'next/image'
 import { isMobile } from 'react-device-detect';
+import { Instagram, Linkedin, Twitter } from "lucide-react";
 
 const BlogAuthor = ({author, caption}) => {
   return (
@@ -20,22 +18,14 @@ const BlogAuthor = ({author, caption}) => {
       </div>
 
       <div className={styles.socials}>
-        <Link
-          className={styles.ig}
-          href="https://instagram.com/sisir.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram size={40} />
-        </Link>
-        &nbsp;&nbsp; &nbsp;&nbsp;
+        
         <Link
           className={styles.fb}
-          href="https://facebook.com/iamshishir7"
+          href="https://linkedin.com/in/iamshishir7"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaFacebook size={40} />
+          <Linkedin size={30} />
         </Link>
         &nbsp;&nbsp; &nbsp;&nbsp;
         <Link
@@ -44,7 +34,16 @@ const BlogAuthor = ({author, caption}) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaTwitter size={40} />
+          <Twitter size={30} />
+        </Link>
+        &nbsp;&nbsp; &nbsp;&nbsp;
+        <Link
+          className={styles.ig}
+          href="https://instagram.com/sisir.dev"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Instagram size={30} />
         </Link>
       </div>
     </div>

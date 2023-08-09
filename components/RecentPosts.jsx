@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { contentful } from "../libs/contentful";
 import styles from "./../styles/recentPosts.module.scss";
 import FormattedDate from "./ui/Date";
+import { LayoutList } from "lucide-react";
 
 export const revalidate = 0;
 
@@ -21,7 +22,7 @@ const RecentPosts = async () => {
 
   return (
     <div className={styles.recentPosts}>
-      <div className={styles.heading}>Recent Posts</div>
+      <div className={styles.heading}><LayoutList /> Recent Posts</div>
       {recentPosts.map((recentPost) => (
         <Link key={recentPost.id} href={`/blogpost/${recentPost.slug}`}>
           <div className={styles.recentPost}>

@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
 
 import FormattedDate from './ui/Date';
+import { ChevronRight } from 'lucide-react';
 
 
 export default function Pagecard({blogPost}) {
@@ -33,7 +34,12 @@ export default function Pagecard({blogPost}) {
                 
                 <div
                 className={styles.actions}>
-                    <Link href={`/blogpost/${slug}`}>Read More </Link>
+                    <Link href={`/blogpost/${slug}`}>
+                        <div className={styles.readmore}>
+                            Read More
+                            <ChevronRight />
+                        </div>
+                    </Link>
                     <FormattedDate date={date}/>
                 </div>
             </div>

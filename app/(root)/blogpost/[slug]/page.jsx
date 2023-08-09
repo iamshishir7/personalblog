@@ -1,5 +1,4 @@
 
-import {AiOutlineTags} from 'react-icons/ai'
 import Image from 'next/image'
 
 import { contentful, convertToJSX } from '../../../../libs/contentful';
@@ -7,6 +6,8 @@ import BlogAuthor from '../../../../components/BlogAuthor'
 import FormattedDate from '../../../../components/ui/Date';
 import styles from '../../../../styles/Slug.module.scss'
 import RecentPosts from '../../../../components/RecentPosts';
+import { Tag} from 'lucide-react';
+
 
 export const revalidate = 0;
 
@@ -53,7 +54,7 @@ const BlogPostPage = async({params}) => {
               <div className={styles.taglist}>
                     {
                       tags.map((tag, index) => (
-                        <div className={styles.tag} key={index}><AiOutlineTags/>{tag}</div>
+                        <div className={styles.tag} key={index}><Tag size={20}/>{tag}</div>
                       ))
                     }
               </div>
