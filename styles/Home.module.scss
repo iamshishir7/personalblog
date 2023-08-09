@@ -47,6 +47,8 @@
 .actions {
     display: flex;
     justify-content: flex-start;
+    gap: 0.5rem;
+    align-items: center;
 
     a {
       color: #fff;
@@ -54,23 +56,7 @@
       padding: 8px 16px;
       text-decoration: none;
       font-size: 1rem;
-  
-      
     }
-
-    .date{
-      padding: 8px 16px;
-      margin-top: 6px;
-      font-size: 1rem;
-      font-weight: 600;
-      padding-top: 3px;
-
-      span {
-        color: #126E82;
-        font-weight: 700;
-      }
-    }
-  
     
   }
 
