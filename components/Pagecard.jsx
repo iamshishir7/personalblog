@@ -11,7 +11,7 @@ export default function Pagecard({blogPost}) {
 
     return (
         <div>
-        <Link href={`/blogpost/${slug}`}>
+        <Link legacyBehavior href={`/blogpost/${slug}`}>
         <div 
             className={styles.card}
         >
