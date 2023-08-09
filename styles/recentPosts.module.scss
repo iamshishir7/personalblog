@@ -5,32 +5,30 @@
 
 
     .heading{
-        font-size: 1.5rem;
-        font-weight: 700;
+        font-size: 1.2rem;
+        font-weight: 600;
         padding: 0.5rem;
-        border-bottom: 1.5px solid rgba(0, 0, 0, 0.2);
     }
 
     .recentPost {
         display: grid;
-        grid-template-columns: 1fr 7fr;
-        margin-bottom: 0.3rem;
+        grid-template-columns: 1fr 8fr;
         align-items: center;
         cursor: pointer;
+        padding: 0.5rem;
+        border-top: 1.5px solid rgba(0, 0, 0, 0.2);
 
-        .imgContainer{
-            padding: 1rem;
-        }
-
+        
         .bannerimage{
             border-radius: 50%;
             object-fit: cover;
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
         }
 
         .label{
-            font-weight: 600;
+            font-weight: 500;
+            font-size: 1.2rem;
         }
     }
 

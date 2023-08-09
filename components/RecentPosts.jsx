@@ -25,15 +25,15 @@ const RecentPosts = async () => {
       {recentPosts.map((recentPost) => (
         <Link key={recentPost.id} href={`/blogpost/${recentPost.slug}`}>
           <div className={styles.recentPost}>
-            <div className={styles.imgContainer}>
+            
               <Image
                 className={`image ${styles.bannerimage}`}
                 src={"https:" + recentPost.image}
-                width={80}
-                height={80}
+                width={50}
+                height={50}
                 alt="RecentPostImg"
               />
-            </div>
+            
             <div className={styles.desc}>
                 <div className={styles.label}>{recentPost.label}</div>
                 <FormattedDate date={recentPost.date}/>
