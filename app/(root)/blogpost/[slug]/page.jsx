@@ -3,7 +3,7 @@ import {AiOutlineTags} from 'react-icons/ai'
 import Image from 'next/image'
 
 import { contentful, convertToJSX } from '../../../../libs/contentful';
-import BlogAuthor from '../../../../styles/blogAuthor.module.scss';
+import BlogAuthor from '../../../../components/BlogAuthor'
 import FormattedDate from '../../../../components/ui/Date';
 import styles from '../../../../styles/Slug.module.scss'
 import RecentPosts from '../../../../components/RecentPosts';

@@ -4,7 +4,7 @@ import { contentful } from "../libs/contentful";
 import styles from "./../styles/recentPosts.module.scss";
 import FormattedDate from "./ui/Date";
 
-export const revalidate = 1;
+export const revalidate = 0;
 
 const RecentPosts = async () => {
   const res = await contentful.getEntries({
@@ -23,8 +23,8 @@ const RecentPosts = async () => {
     <div className={styles.recentPosts}>
       <div className={styles.heading}>Recent Posts</div>
       {recentPosts.map((recentPost) => (
-        <Link href={`/blogpost/${recentPost.slug}`}>
-          <div key={recentPost.id} className={styles.recentPost}>
+        <Link key={recentPost.id} href={`/blogpost/${recentPost.slug}`}>
+          <div className={styles.recentPost}>
             <div className={styles.imgContainer}>
               <Image
                 className={`image ${styles.bannerimage}`}
