@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
 
-import FormattedDate from './ui/date';
+import FormattedDate from './ui/Date';
 
 
 export default function Pagecard({blogPost}) {
@@ -11,7 +11,7 @@ export default function Pagecard({blogPost}) {
 
     return (
         <div>
-        <Link legacyBehavior href={`/blogpost/${slug}`}>
+        <Link href={`/blogpost/${slug}`}>
         <div 
             className={styles.card}
         >

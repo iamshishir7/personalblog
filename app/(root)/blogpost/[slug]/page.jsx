@@ -3,9 +3,10 @@ import {AiOutlineTags} from 'react-icons/ai'
 import Image from 'next/image'
 
 import { contentful, convertToJSX } from '../../../../libs/contentful';
-import BlogAuthor from '../../../../components/blogAuthor';
-import FormattedDate from '../../../../components/ui/date';
+import BlogAuthor from '../../../../components/BlogAuthor';
+import FormattedDate from '../../../../components/ui/Date';
 import styles from '../../../../styles/Slug.module.scss'
+import RecentPosts from '../../../../components/RecentPosts';
 
 export const revalidate = 0;
 
@@ -21,7 +22,7 @@ const BlogPostPage = async({params}) => {
     const {featuredImage, title, content, tags, description, date} = blogPost.fields
     
     return (
-        <div>
+        <>
         
           <div className={styles.blogheader}>
             <h2 className={styles.titlex}>{title}</h2>
@@ -58,8 +59,8 @@ const BlogPostPage = async({params}) => {
               </div>
             </div>
         </div>
-        
-      </div>
+        <RecentPosts/>
+      </>
     )
 }
 

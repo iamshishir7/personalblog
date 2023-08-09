@@ -3,8 +3,6 @@ import Image from 'next/image'
 
 import '../styles/globals.scss'
 
-
-
 export const metadata = {
     title: 'Blog | Shishir Timalsina',
     description: 'Shishir Timalsina',

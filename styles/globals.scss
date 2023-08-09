@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+
 *{
   box-sizing: border-box;
 }
@@ -10,6 +11,11 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5rem;  
+}
+
+a{
+  text-decoration: none;
+  color: #000;
 }
 
 .image{
@@ -22,17 +28,7 @@ body {
   margin-right: auto;
   margin-left:auto;
 
-  header{
-    a{
-      text-decoration-line: none;
-      color: black;
-      h1{
-        font-size: 1.5rem;
-        color:#126E82
-      }
-    }
-  }
-
+  
   .page-content{
     max-width: 1200px;
     margin-right: auto;
