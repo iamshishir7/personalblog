@@ -4,7 +4,7 @@ import { contentful } from '../../libs/contentful'
 
 
 import styles from '../../styles/Home.module.scss'
-import Pagecard from '../../components/pagecard'
+import Pagecard from '../../components/Pagecard'
 
 export const revalidate = 0;
 
