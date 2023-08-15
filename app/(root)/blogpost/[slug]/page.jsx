@@ -1,11 +1,11 @@
 
 import Image from 'next/image'
 
-import { contentful, convertToJSX } from '../../../../libs/contentful';
-import BlogAuthor from '../../../../components/BlogAuthor'
-import FormattedDate from '../../../../components/ui/Date';
-import styles from '../../../../styles/Slug.module.scss'
-import RecentPosts from '../../../../components/RecentPosts';
+import { contentful, convertToJSX } from '/libs/contentful';
+import BlogAuthor from '/components/BlogAuthor'
+import FormattedDate from '/components/ui/Date';
+import styles from '/app/styles/Slug.module.scss'
+import RecentPosts from '/components/RecentPosts';
 import { Tag} from 'lucide-react';
 
 

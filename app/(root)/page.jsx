@@ -1,10 +1,9 @@
 
+import { contentful } from '/libs/contentful'
 
-import { contentful } from '../../libs/contentful'
 
-
-import styles from '../../styles/Home.module.scss'
-import Pagecard from '../../components/Pagecard'
+import styles from '/app/styles/Home.module.scss'
+import Pagecard from '/components/Pagecard'
 
 export const revalidate = 0;
 

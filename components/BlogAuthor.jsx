@@ -1,5 +1,5 @@
 import React from "react";
-import styles from '../styles/blogAuthor.module.scss'
+import styles from '/app/styles/blogAuthor.module.scss'
 import Link from "next/link";
 import Image from 'next/image'
 import { isMobile } from 'react-device-detect';

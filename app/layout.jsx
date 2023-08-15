@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-import '../styles/globals.scss'
+import '/app/styles/globals.scss'
 
 export const metadata = {
     title: 'Blog | Shishir Timalsina',

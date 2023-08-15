@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import styles from '../styles/Home.module.scss'
+import styles from '/app/styles/Home.module.scss'
 import Link from 'next/link'
 
-import FormattedDate from './ui/Date';
+import FormattedDate from '/components/ui/Date';
 import { ChevronRight } from 'lucide-react';
 
 

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from 'next/image';
-import { contentful } from "../libs/contentful";
-import styles from "./../styles/recentPosts.module.scss";
-import FormattedDate from "./ui/Date";
+import { contentful } from "/libs/contentful";
+import styles from "/app/styles/recentPosts.module.scss";
+import FormattedDate from "/components/ui/Date";
 import { LayoutList } from "lucide-react";
 
 export const revalidate = 0;
