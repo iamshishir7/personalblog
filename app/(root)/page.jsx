@@ -13,6 +13,10 @@ const HomePage = async() => {
 
     const blogPosts =  res.items
 
+    if(blogPosts.length === 0){
+        return <div className={styles.noposts}>No Posts have been made</div>
+    }
+
     return(
     <>
         <div className={styles.bloglist}>
